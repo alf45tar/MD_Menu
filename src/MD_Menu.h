@@ -227,7 +227,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 // Label size definitions
 // These are sized for the most common LCD display (16 char x 2 lines) 
 const uint8_t HEADER_LABEL_SIZE = 16;   ///< Displayed length of a menu header label
-const uint8_t ITEM_LABEL_SIZE = 14;     ///< Displayed length of a menu item label
+const uint8_t ITEM_LABEL_SIZE = 15;     ///< Displayed length of a menu item label
 const uint8_t INPUT_LABEL_SIZE = 14;    ///< Displayed length of an input item label
 
 // Miscellaneous defines
@@ -263,13 +263,13 @@ public:
   * navigation in the library and data input is fully controlled by
   * this returned value.
   */
-  typedef enum userNavAction_t
+ enum userNavAction_t
   {
     NAV_NULL,  ///< There was no current selection to process
     NAV_INC,   ///< INCREMENT. Move to the next menu item or increment a value.
     NAV_DEC,   ///< DECREMENT. Move to the previous menu item or decrement a value.
     NAV_SEL,   ///< SELECT the current menu item or confirm a new value.
-    NAV_ESC,   ///< ESCAPE from current menu or abandon editing a value (remains unchanged).
+    NAV_ESC,    ///< ESCAPE from current menu or abandon editing a value (remains unchanged).
   };
 
   /**
@@ -321,7 +321,7 @@ public:
     INP_INT,    ///< The item is for input of an integer
     INP_FLOAT,  ///< The item is for input of a real number representation with 2 decimal digits 
     INP_ENGU,   ///< The item is for input of a number in engineering (powers of 10 which are multiples of 3) with 3 decimal digits.
-    INP_RUN,    ///< The item will run a user function
+    INP_RUN,     ///< The item will run a user function
   };
 
   /**
@@ -331,7 +331,7 @@ public:
   * must be known (the latter for ENGU). This small structure contains
   * both values, keeping them together whilst processing.
   */
-  typedef struct value_t
+ struct value_t
   {
     int32_t value;   ///< the value of the number (or represents 999.999 for INP_ENGU)
     int8_t  power;   ///< the power of 10 (multiple of 3 eg, -3 (milli) 0, 3 (kilo), 6 (Mega))
@@ -355,7 +355,7 @@ public:
   * contains enough data for the data collection to be managed by the
   * library.
   */
-  typedef struct mnuInput_t
+struct mnuInput_t
   {
     mnuId_t id;            ///< Identifier for this item
     char    label[INPUT_LABEL_SIZE + 1]; ///< Label for this menu item
@@ -387,7 +387,7 @@ public:
   * records of a menu header item, where a continuous range form part
   * of the menu.
   */
-  typedef struct mnuItem_t
+struct mnuItem_t
   {
     mnuId_t id;            ///< Identifier for this item
     char    label[ITEM_LABEL_SIZE + 1]; ///< Label for this menu item
@@ -402,7 +402,7 @@ public:
   * This data structure encodes the contiguous range of menu item numbers 
   * that form part of the menu.
   */
-  typedef struct mnuHeader_t
+struct mnuHeader_t
   {
     mnuId_t id;          ///< Identifier for this item
     char    label[HEADER_LABEL_SIZE + 1]; ///< Label for this menu item
