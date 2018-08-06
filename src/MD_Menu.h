@@ -227,7 +227,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 // Label size definitions
 // These are sized for the most common LCD display (16 char x 2 lines) 
 const uint8_t HEADER_LABEL_SIZE = 16;   ///< Displayed length of a menu header label
-const uint8_t ITEM_LABEL_SIZE = 15;     ///< Displayed length of a menu item label
+const uint8_t ITEM_LABEL_SIZE   = 15;   ///< Displayed length of a menu item label
 const uint8_t INPUT_LABEL_SIZE = 14;    ///< Displayed length of an input item label
 
 // Miscellaneous defines
