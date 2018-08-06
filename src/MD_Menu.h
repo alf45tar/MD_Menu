@@ -269,7 +269,7 @@ public:
     NAV_INC,   ///< INCREMENT. Move to the next menu item or increment a value.
     NAV_DEC,   ///< DECREMENT. Move to the previous menu item or decrement a value.
     NAV_SEL,   ///< SELECT the current menu item or confirm a new value.
-    NAV_ESC,    ///< ESCAPE from current menu or abandon editing a value (remains unchanged).
+    NAV_ESC,   ///< ESCAPE from current menu or abandon editing a value (remains unchanged).
   };
 
   /**
@@ -321,7 +321,7 @@ public:
     INP_INT,    ///< The item is for input of an integer
     INP_FLOAT,  ///< The item is for input of a real number representation with 2 decimal digits 
     INP_ENGU,   ///< The item is for input of a number in engineering (powers of 10 which are multiples of 3) with 3 decimal digits.
-    INP_RUN,     ///< The item will run a user function
+    INP_RUN,    ///< The item will run a user function
   };
 
   /**
