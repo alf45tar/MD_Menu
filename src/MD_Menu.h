@@ -603,12 +603,12 @@ private:
   const mnuInput_t *_mnuInp;    ///< Input item table
   uint8_t _mnuInpCount;   ///< Number of items in the input table
 
+  // Status values and global flags
+  uint8_t _options;       ///< bit field for options and flags
+  
   // Timeout related
   uint32_t _timeLastKey;  ///< Time a menu key was last pressed
   uint32_t _timeout;      ///< Menu inactivity timeout in milliseconds
-
-  // Status values and global flags
-  uint8_t _options;       ///< bit field for options and flags
 
   // Input editing buffers
   value_t *_pValue;  ///< Pointer to the user provided data buffer
